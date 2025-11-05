@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+function Square({ value }) {
+  return (
+    <button className="bg-white border border-gray-400 h-12 w-12 m-1 leading-9 text-lg text-center">
+      {value}
+    </button>
+  );
+}
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function Board() {
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <Square value="1" />
+        <Square value="2" />
+        <Square value="3" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div>
+        <Square value="4" />
+        <Square value="5" />
+        <Square value="6" />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div>
+        <Square value="7" />
+        <Square value="8" />
+        <Square value="9" />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+// export default function Square() {
+//   const arr = (
+//     <button className="bg-white border border-gray-400 h-12 w-12 m-1 leading-9 text-lg text-center">
+//       x
+//     </button>
+//   );
+//   const newArr = [];
+//   for (let i = 0; i <= 9; i++) {
+//     newArr.push(arr);
+//   }
+
+//   console.log(newArr);
+
+//   return (
+//     <div className="grid grid-cols-3 justify-around ">
+//       {newArr}
+//     </div>
+//   );
+// }
